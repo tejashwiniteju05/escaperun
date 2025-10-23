@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [SerializeField] playerController capsule;   
+    [SerializeField] palyercontroller capsule;   
+
     AudioSource audioSource;
 
     [SerializeField] AudioClip successClip;
