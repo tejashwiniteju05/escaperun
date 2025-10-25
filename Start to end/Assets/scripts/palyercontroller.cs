@@ -17,7 +17,12 @@ public class palyercontroller : MonoBehaviour
         MovePlayer();
     }
     void MovePlayer()
-    {
+  {
+      
+      if (isGrounded && velocity.y < 0)
+      {
+          velocity.y = -2f;
+      }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -33,9 +38,8 @@ public class palyercontroller : MonoBehaviour
 
         if (Input.GetButton("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(-2f * gravity * 3f);
+            velocity.y = Mathf.Sqrt(-2f * gravity * 35f);
         }
-
     }
 }
 
